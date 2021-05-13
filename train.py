@@ -23,7 +23,7 @@ num_classes = 11
 im_height = 224
 im_width = 224
 batch_size = 32
-epochs = 20
+epochs = 24
 
 # TODO: preprocessing of images
 
