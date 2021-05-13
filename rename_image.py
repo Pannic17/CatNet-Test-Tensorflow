@@ -6,7 +6,7 @@ def rename():
     path = input("请输入路径(例如D:\\\\picture)：")
     name = input("请输入开头名:")
     startNumber = input("请输入开始数:")
-    fileType = input("请输入后缀名（如 .jpg、.txt等等）:")
+    fileType = ".jpg"
     print("正在生成以" + name + startNumber + fileType + "迭代的文件名")
     count = 0
     filelist = os.listdir(path)

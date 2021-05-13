@@ -17,6 +17,8 @@ image_root = "H://Project/21ACB/ACB_pretrained/cat_data_test/"
 train_dir = image_root + "train"
 validation_dir = image_root + "validation"
 
+# TODO: num_classes
+num_classes = 11
 # define train parameters
 im_height = 224
 im_width = 224
@@ -54,7 +56,7 @@ with open('class_indices.json', 'w') as json_file:
     json_file.write(json_str)
 
 # TODO: update the num_classes
-feature = resnet101(num_classes=3, include_top=False)
+feature = resnet101(num_classes=num_classes, include_top=False)
 # feature.build((None, 224, 224, 3))  # when using subclass model
 feature.load_weights('pretrain_weights.ckpt')  # 加载预训练模型
 feature.trainable = False  # 训练时冻结与训练模型参数
@@ -67,7 +69,7 @@ model = tf.keras.Sequential([feature,
                              tf.keras.layers.Dropout(rate=0.5),
                              tf.keras.layers.Dense(1024),
                              tf.keras.layers.Dropout(rate=0.5),
-                             tf.keras.layers.Dense(3),
+                             tf.keras.layers.Dense(num_classes),
                              tf.keras.layers.Softmax()])
 # model.build((None, 224, 224, 3))
 model.summary()  # 打印增加层的参数
