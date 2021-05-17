@@ -11,7 +11,7 @@ import numpy as np
 data_root = os.path.abspath(os.path.join(os.getcwd(), "../.."))
 # get cat image path
 # TODO: path
-image_root = "H://Project/21ACB/ACB_pretrained/cat_data_test/"
+image_root = "H://Project/21ACB/ACB_pretrained/cat_faces/"
 
 # train, validation, test path
 train_dir = image_root + "train"
@@ -22,7 +22,7 @@ num_classes = 11
 # define train parameters
 im_height = 224
 im_width = 224
-batch_size = 32
+batch_size = 16
 epochs = 24
 
 # TODO: preprocessing of images

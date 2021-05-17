@@ -6,4 +6,4 @@ def untar(fname, dirs):
     t.extractall(path = dirs)
 
 if __name__ == "__main__":
-    untar("images.tar.gz", ".")
+    untar("annotations.tar.gz", ".")
