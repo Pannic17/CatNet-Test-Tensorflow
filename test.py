@@ -75,7 +75,7 @@ im_height = 224
 im_width = 224
 
 # load pic
-img = Image.open("H://Project/21ACB/ACB_pretrained/cat_faces/test/Bombay_test_1.jpg")
+img = Image.open("H://Project/21ACB/ACB_pretrained/cat_faces/test/Abyssinian_test_1.jpg")
 
 # cut the cat face out
 # img = cut("H://Project/21ACB/ACB_pretrained/cat_data_test/test/Abyssinian_test_4.jpg")
